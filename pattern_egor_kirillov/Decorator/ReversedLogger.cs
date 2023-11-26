@@ -19,8 +19,13 @@ namespace pattern_egor_kirillov.Decorator
 
         public override string Log()
         {
-            logger?.Log().Reverse();
-            return logger?.Log();
+            string tmpStr = "";
+            IEnumerable<char> numer = logger?.Log().Reverse();
+            foreach (var item in numer?.ToList())
+            {
+                tmpStr += item.ToString();
+            }
+            return tmpStr;
         }
     }
 }

@@ -6,6 +6,6 @@ ErrorLogger logger = new("Standart error message...", 216);
 FileLog fileLog = new(logger);
 fileLog.Log();
 
-UpperCaseLogger reversed = new(logger);
+ReversedLogger reversed = new(logger);
 ConsoleLog consoleLog = new(reversed);
 consoleLog.Log();
